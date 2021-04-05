@@ -1,23 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import App from './App';
+// Redux 모듈
+import store from "./store/store";
+import { Provider } from "react-redux";
+import * as serviceWorker from "./serviceWorker";
 
-import store from './app/store';
-import { Provider } from 'react-redux';
-import * as serviceWorker from './serviceWorker';
+// Router
+import { BrowserRouter, Route, Link, useLocation } from "react-router-dom";
 
-import { BrowserRouter } from 'react-router-dom';
+// Containers
+import * as Containers from "./containers";
+
+// tailwindcss
+import './index.css';
 
 ReactDOM.render(
   <BrowserRouter>
-    <React.StrictMode>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </React.StrictMode>
+    <Provider store={store}>
+      <React.StrictMode>
+      <Route path="/"><Containers.NavigationBar /></Route>
+        <Route path="/service/info"><Containers.ServiceInformaion /></Route>
+      </React.StrictMode>
+    </Provider>
   </BrowserRouter>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
