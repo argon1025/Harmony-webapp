@@ -1,4 +1,4 @@
-import { NavigationBarComponent, ServiceInformaionComponent } from "../components";
+import { NavigationBarComponent } from "../components";
 import { connect } from "react-redux";
 
 function reduxStateToReactProps(state) {

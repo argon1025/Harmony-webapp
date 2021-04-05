@@ -7,7 +7,7 @@ import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
 
 // Router
-import { BrowserRouter, Route, Link, useLocation } from "react-router-dom";
+import { BrowserRouter, Route} from "react-router-dom";
 
 // Containers
 import * as Containers from "./containers";
