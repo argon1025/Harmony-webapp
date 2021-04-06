@@ -1,3 +1,4 @@
 import ServiceInformaion from "./ServiceInformaion";
 import NavigationBar from "./NavigationBar";
-export { ServiceInformaion,NavigationBar };
+import MainIntroduction from "./MainIntroduction";
+export { ServiceInformaion, NavigationBar, MainIntroduction };

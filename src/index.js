@@ -19,7 +19,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Provider store={store}>
       <React.StrictMode>
-      <Route path="/"><Containers.NavigationBar /></Route>
+        <Route exact path="/"><Containers.NavigationBar /><Containers.MainIntroduction /></Route>
         <Route path="/service/info"><Containers.ServiceInformaion /></Route>
       </React.StrictMode>
     </Provider>
