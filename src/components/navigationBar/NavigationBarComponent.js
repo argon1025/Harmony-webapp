@@ -8,7 +8,7 @@ export default class NavigationBar extends Component {
 
   render() {
     return (
-      <div>
+      <div class="bg-gray-50">
         <div class="flex lg:flex-row flex-col p-3">
           <div class="flex flex-auto flex-row justify-center pt-2">
             <svg
