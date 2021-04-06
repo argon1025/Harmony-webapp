@@ -5,13 +5,21 @@ export default createStore((state, action) => {
   console.log(action);
   if (state === undefined) {
     return {
-      version: 1,
-      testvalue: 0,
+      APP_VERSION: "0.1",
+      TEST_VALUE: 0,
+      USER_LOGIN: false,
+      USER_ID: "",
+      USER_JOBTAG: "",
+      USER_NAME: "",
+      USER_PROFILE: "",
+      USER_LOGIN_TYPE: "",
+      ERROR_STATE: false,
+      ERROR_MSG: "",
     };
   }
 
   if (action.type === "ServiceInformaion/SET_TEXT") {
-    return { ...state, testvalue: action.size };
+    return { ...state, TEST_VALUE: action.size };
   }
 
   return state;
