@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "../../res/logo.svg";
 import kakaoLogin from "../../res/kakao_login_medium_narrow.png";
 
 export default class NavigationBar extends Component {
@@ -55,19 +54,23 @@ export default class NavigationBar extends Component {
             </svg>
             <p class="text-2xl font-semibold text-gray-700"> Harmony</p>
           </div>
-          <div class="flex-auto flex justify-center pt-2">
-            <a class="text-lg text-gray-700 pr-4" href="/">
+          <div class="flex-auto flex justify-center pt-3">
+            <a class="text-base text-gray-700 pr-4" href="/">
               파트너 찾기
             </a>
-            <a class="text-lg text-gray-700 pr-4" href="/">
+            <a class="text-base text-gray-700 pr-4" href="/">
               프로젝트 찾기
             </a>
-            <a class="text-lg text-gray-700" href="/">
+            <a class="text-base text-gray-700" href="/">
               프로젝트 등록
             </a>
           </div>
           <div class="flex-auto flex justify-center">
-            <img src={kakaoLogin}></img>
+            {this.props.USER_LOGIN ? (
+              <div><p class="text-sm text-gray-700 pt-3">{this.props.USER_NAME}님 안녕하세요</p></div>
+            ):(
+              <div><img src={kakaoLogin} alt="kakao_login"></img></div>
+            )}
           </div>
         </div>
         <hr></hr>
