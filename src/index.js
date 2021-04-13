@@ -20,7 +20,8 @@ ReactDOM.render(
     <Provider store={store}>
       <React.StrictMode>
         <Route exact path="/"><Containers.NavigationBar /><Containers.MainIntroduction /><Containers.FooterBar /></Route>
-        <Route path="/service/info"><Containers.ServiceInformaion /></Route>
+        <Route exact path="/service/info"><Containers.ServiceInformaion /></Route>
+        <Route exact path="/kakao/auth"><Containers.KakaoLogin /></Route>
       </React.StrictMode>
     </Provider>
   </BrowserRouter>,
