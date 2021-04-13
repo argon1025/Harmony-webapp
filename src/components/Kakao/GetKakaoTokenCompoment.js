@@ -15,8 +15,8 @@ export default class MainIntroductionCompoment extends Component {
 
   render() {
     return (
-      <div classname="">
-          Login...
+      <div className="">
+          Login... Code = {this.state.parsed.code}
       </div>
     );
   }
