@@ -16,7 +16,7 @@ import * as Containers from "./containers";
 import './index.css';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/">
     <Provider store={store}>
       <React.StrictMode>
         <Route exact path="/"><Containers.NavigationBar /><Containers.MainIntroduction /><Containers.FooterBar /></Route>
