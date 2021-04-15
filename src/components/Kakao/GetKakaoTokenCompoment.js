@@ -12,6 +12,9 @@ export default class MainIntroductionCompoment extends Component {
     this.state.parsed = queryString.parse(window.location.search);
     console.log(this.state.parsed);
   }
+  componentDidMount(){
+    this.props.getKakaoToken(this.state.parsed.code);
+  }
 
   render() {
     return (
