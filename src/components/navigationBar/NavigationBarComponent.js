@@ -8,11 +8,11 @@ export default class NavigationBar extends Component {
 
   render() {
     return (
-      <div class="bg-gray-50">
-        <div class="flex lg:flex-row flex-col p-3">
-          <div class="flex flex-auto flex-row justify-center pt-2">
+      <div className="bg-gray-50">
+        <div className="flex lg:flex-row flex-col p-3">
+          <div className="flex flex-auto flex-row justify-center pt-2">
             <svg
-              class="fill-current text-gray-700 text-2xl w-6 h-6"
+              className="fill-current text-gray-700 text-2xl w-6 h-6"
               viewBox="0 0 510 510"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -52,22 +52,22 @@ export default class NavigationBar extends Component {
                 />
               </g>
             </svg>
-            <p class="text-2xl font-semibold text-gray-700"> Harmony</p>
+            <p className="text-2xl font-semibold text-gray-700"> Harmony</p>
           </div>
-          <div class="flex-auto flex justify-center pt-3">
-            <a class="text-base text-gray-700 pr-4" href="/">
+          <div className="flex-auto flex justify-center pt-3">
+            <a className="text-base text-gray-700 pr-4" href="/">
               파트너 찾기
             </a>
-            <a class="text-base text-gray-700 pr-4" href="/">
+            <a className="text-base text-gray-700 pr-4" href="/">
               프로젝트 찾기
             </a>
-            <a class="text-base text-gray-700" href="/">
+            <a className="text-base text-gray-700" href="/">
               프로젝트 등록
             </a>
           </div>
-          <div class="flex-auto flex justify-center">
+          <div className="flex-auto flex justify-center">
             {this.props.USER_LOGIN ? (
-              <div><p class="text-sm text-gray-700 pt-3">{this.props.USER_NAME}님 안녕하세요</p></div>
+              <div><p className="text-sm text-gray-700 pt-3">{this.props.USER_NAME}님 안녕하세요</p></div>
             ):(
               <div><img src={kakaoLogin} alt="kakao_login"></img></div>
             )}
