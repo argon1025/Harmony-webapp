@@ -69,7 +69,7 @@ export default class NavigationBar extends Component {
             {this.props.USER_LOGIN ? (
               <div><p className="text-sm text-gray-700 pt-3">{this.props.USER_NAME}님 안녕하세요</p></div>
             ):(
-              <div><img src={kakaoLogin} alt="kakao_login"></img></div>
+              <div><a href="https://kauth.kakao.com/oauth/authorize?client_id=dab58a800514cc429576cf0f84c83ab0&redirect_uri=http://harmony.seongrok.net/kakao/auth&response_type=code"><img src={kakaoLogin} alt="kakao_login" ></img></a></div>
             )}
           </div>
         </div>
