@@ -1,3 +1,8 @@
+/**
+ * Action
+ * 
+ * Redux 에서 상태에 변화가 필요할때 발생되는 액션
+ */
 import Axios from "axios";
 
 export const getComments = (testValue) => async (dispatch, getState) => {
