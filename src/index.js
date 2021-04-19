@@ -6,6 +6,10 @@ import store from "./store/store";
 import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
 
+//Redux Persist
+import { persistStore } from 'redux-persist';
+import { PersistGate } from 'redux-persist/integration/react';
+
 // Router
 import { BrowserRouter, Route} from "react-router-dom";
 
@@ -15,14 +19,18 @@ import * as Containers from "./containers";
 // tailwindcss
 import './index.css';
 
+const persistor = persistStore(store);
+
 ReactDOM.render(
   <BrowserRouter basename="/">
     <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
       <React.StrictMode>
         <Route exact path="/"><Containers.NavigationBar /><Containers.MainIntroduction /><Containers.FooterBar /></Route>
         <Route exact path="/service/info"><Containers.ServiceInformaion /></Route>
         <Route exact path="/kakao/auth"><Containers.KakaoLogin /></Route>
       </React.StrictMode>
+      </PersistGate>
     </Provider>
   </BrowserRouter>,
   document.getElementById("root")
