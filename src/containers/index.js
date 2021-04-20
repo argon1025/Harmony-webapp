@@ -4,4 +4,5 @@ import MainIntroduction from "./MainIntroduction";
 import FooterBar from "./FooterBar";
 import KakaoLogin from "./KakaoLogin";
 import SignUp from "./signUp";
-export { ServiceInformaion, NavigationBar, MainIntroduction, FooterBar, KakaoLogin, SignUp};
+import CautionModal from "./CautionModal";
+export { ServiceInformaion, NavigationBar, MainIntroduction, FooterBar, KakaoLogin, SignUp, CautionModal};

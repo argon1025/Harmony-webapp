@@ -4,6 +4,7 @@ import MainIntroductionComponent from "./MainIntroduction/MainIntrodutionCompone
 import FooterBarComponent from "./FooterBar/FooterBarComponent";
 import GetKakaoTokenComponent from "./Kakao/GetKakaoTokenComponent";
 import SignUpComponent from "./SignUp/signUpComponent";
+import CautionModalComponent from "./Modal/CautionModalComponent";
 
 export {
   ServiceInformaionComponent,
@@ -12,4 +13,5 @@ export {
   FooterBarComponent,
   GetKakaoTokenComponent,
   SignUpComponent,
+  CautionModalComponent,
 };

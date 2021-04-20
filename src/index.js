@@ -26,6 +26,7 @@ ReactDOM.render(
     <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <React.StrictMode>
+        <Containers.CautionModal />
         <Route exact path="/"><Containers.NavigationBar /><Containers.MainIntroduction /><Containers.FooterBar /></Route>
         <Route exact path="/service/info"><Containers.ServiceInformaion /></Route>
         <Route exact path="/kakao/auth"><Containers.KakaoLogin /></Route>
