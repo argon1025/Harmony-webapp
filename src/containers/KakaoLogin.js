@@ -1,4 +1,4 @@
-import { GetKakaoTokenCompoment } from "../components";
+import { GetKakaoTokenComponent } from "../components";
 import { connect } from "react-redux";
 import * as RESTAPI from "../action/RESTAPI";
 
@@ -18,4 +18,4 @@ function reduxDispatchToReactProps(dispatch) {
 export default connect(
   reduxStateToReactProps,
   reduxDispatchToReactProps
-)(GetKakaoTokenCompoment);
+)(GetKakaoTokenComponent);
