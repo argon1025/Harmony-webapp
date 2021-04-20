@@ -1,13 +1,15 @@
 import ServiceInformaionComponent from "./test/ServiceInformaionComponent";
 import NavigationBarComponent from "./NavigationBar/NavigationBarComponent";
-import MainIntroductionCompoment from "./MainIntroduction/MainIntrodutionCompoment";
-import FooterBarCompoment from "./FooterBar/FooterBarCompoment";
-import GetKakaoTokenCompoment from "./Kakao/GetKakaoTokenCompoment";
+import MainIntroductionComponent from "./MainIntroduction/MainIntrodutionComponent";
+import FooterBarComponent from "./FooterBar/FooterBarComponent";
+import GetKakaoTokenComponent from "./Kakao/GetKakaoTokenComponent";
+import SignUpComponent from "./SignUp/signUpComponent";
 
 export {
   ServiceInformaionComponent,
   NavigationBarComponent,
-  MainIntroductionCompoment,
-  FooterBarCompoment,
-  GetKakaoTokenCompoment,
+  MainIntroductionComponent,
+  FooterBarComponent,
+  GetKakaoTokenComponent,
+  SignUpComponent,
 };
