@@ -15,8 +15,8 @@ function reduxStateToReactProps(state) {
 function reduxDispatchToReactProps(dispatch) {
   // dispatch 메서드를 전달
   return {
-    ping: (text) => {
-      dispatch(RESTAPI.getComments(text));
+    setTestValue: (text) => {
+      dispatch(RESTAPI.setTestValue(text));
     },
     openErrorModal:(error)=>{
       dispatch(modal.openErrorMessage(error));

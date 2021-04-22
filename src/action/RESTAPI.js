@@ -5,7 +5,7 @@
  */
 import Axios from "axios";
 
-export const getComments = (testValue) => async (dispatch, getState) => {
+export const setTestValue = (testValue) => async (dispatch, getState) => {
     dispatch({ type: "ServiceInformaion/SET_TEXT", size: "pong" });
 }
 
