@@ -14,6 +14,8 @@ const initState = {
 };
 
 const reducer = (state = initState, action) => {
+  console.log(state);
+  console.log(action);
   // 액션 처리
   switch (action.type) {
     case "ServiceInformaion/SET_TEXT":

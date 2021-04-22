@@ -1,6 +1,9 @@
 import { ServiceInformaionComponent } from "../components";
 import { connect } from "react-redux";
+
+// Import Action
 import * as RESTAPI from "../action/RESTAPI";
+import * as modal from "../action/modal";
 
 function reduxStateToReactProps(state) {
   // 리덕스 스토어 상태를 전달
@@ -14,6 +17,9 @@ function reduxDispatchToReactProps(dispatch) {
   return {
     ping: (text) => {
       dispatch(RESTAPI.getComments(text));
+    },
+    openErrorModal:(error)=>{
+      dispatch(modal.openErrorMessage(error));
     },
   };
 }
