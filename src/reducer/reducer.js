@@ -9,17 +9,21 @@ const initState = {
   USER_PROFILE: "",
   USER_LOGIN_TYPE: "",
 
-  ERROR_STATE: false,
+  ERROR_STATE: true,
   ERROR_MSG: "",
 };
 
 const reducer = (state = initState, action) => {
-    // 액션 처리
-    switch (action.type) {
-      case "ServiceInformaion/SET_TEXT":
-        return { ...state, TEST_VALUE: action.size };
-      default:
-        return state;
-    }
-  };
+  // 액션 처리
+  switch (action.type) {
+    case "ServiceInformaion/SET_TEXT":
+      return { ...state, TEST_VALUE: action.size };
+    case "Service/ERROR_MODAL_OPEN":
+      return { ...state, ERROR_MSG: action.size, ERROR_STATE: true };
+    case "Service/ERROR_MODAL_CLOSE":
+      return { ...state, ERROR_MSG: "", ERROR_STATE: false };
+    default:
+      return state;
+  }
+};
 export default reducer;
