@@ -2,6 +2,9 @@ const initState = {
   APP_VERSION: "0.1",
   TEST_VALUE: 0,
 
+  ACCESS_TOKEN:"",
+  REFRESH_TOKEN:"",
+
   USER_LOGIN: false,
   USER_ID: "",
   USER_JOBTAG: "",
@@ -11,6 +14,7 @@ const initState = {
 
   ERROR_STATE: true,
   ERROR_MSG: "",
+  ERROR_TARGET_PATH:"",
 };
 
 const reducer = (state = initState, action) => {
@@ -21,9 +25,11 @@ const reducer = (state = initState, action) => {
     case "ServiceInformaion/SET_TEXT":
       return { ...state, TEST_VALUE: action.size };
     case "Service/ERROR_MODAL_OPEN":
-      return { ...state, ERROR_MSG: action.size, ERROR_STATE: true };
+      return { ...state, ERROR_MSG: action.size.msg, ERROR_STATE: true,ERROR_TARGET_PATH: action.size.path};
     case "Service/ERROR_MODAL_CLOSE":
       return { ...state, ERROR_MSG: "", ERROR_STATE: false };
+      case "Service/SET_TOKEN_INFO":
+        return { ...state, ACCESS_TOKEN: action.size.accessToken, REFRESH_TOKEN: action.size.refreshToken };
     default:
       return state;
   }
