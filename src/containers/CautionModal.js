@@ -7,6 +7,7 @@ function reduxStateToReactProps(state) {
   return {
     ERROR_STATE: state.ERROR_STATE,
     ERROR_MSG: state.ERROR_MSG,
+    ERROR_TARGET_PATH: state.ERROR_TARGET_PATH,
   };
 }
 function reduxDispatchToReactProps(dispatch) {
@@ -15,8 +16,8 @@ function reduxDispatchToReactProps(dispatch) {
     openErrorModal:(error)=>{
       dispatch(modal.openErrorMessage(error));
     },
-    closeErrorModal:()=>{
-      dispatch(modal.closeErrorMessage());
+    closeErrorModal:(path)=>{
+      dispatch(modal.closeErrorMessage(path));
     }
   };
 }

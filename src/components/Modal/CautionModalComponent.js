@@ -8,7 +8,7 @@ export default class CautionModal extends Component {
   }
   closeModal() {
     console.log("close Error Modal");
-    this.props.closeErrorModal();
+    this.props.closeErrorModal(this.props.ERROR_TARGET_PATH);
   }
 
   render() {
