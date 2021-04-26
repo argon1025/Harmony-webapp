@@ -1,4 +1,4 @@
-import { FooterBarCompoment } from "../components";
+import { FooterBarComponent } from "../components";
 import { connect } from "react-redux";
 
 function reduxStateToReactProps(state) {
@@ -13,4 +13,4 @@ function reduxDispatchToReactProps(dispatch) {
 export default connect(
   reduxStateToReactProps,
   reduxDispatchToReactProps
-)(FooterBarCompoment);
+)(FooterBarComponent);

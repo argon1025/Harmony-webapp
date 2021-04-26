@@ -1,16 +1,18 @@
-import { MainIntroductionComponent } from "../components";
+import { SignUpComponent } from "../components";
 import { connect } from "react-redux";
 
 function reduxStateToReactProps(state) {
   // 리덕스 스토어 상태를 전달
-  return {};
+  return {
+  };
 }
 function reduxDispatchToReactProps(dispatch) {
   // dispatch 메서드를 전달
-  return {};
+  return {
+  };
 }
 
 export default connect(
   reduxStateToReactProps,
   reduxDispatchToReactProps
-)(MainIntroductionComponent);
+)(SignUpComponent);
