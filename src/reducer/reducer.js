@@ -49,6 +49,18 @@ const reducer = (state = initState, action) => {
         USER_PROFILE: action.size.USER_PROFILE,
         USER_LOGIN_TYPE: "kakao",
       };
+      case "Service/LOGOUT":
+        return {
+          ...state,
+          ACCESS_TOKEN: "",
+          REFRESH_TOKEN: "",
+          USER_LOGIN: false,
+          USER_ID: "",
+          USER_JOBTAG: "",
+          USER_NAME: "",
+          USER_PROFILE: "",
+          USER_LOGIN_TYPE: "",
+        };
     default:
       return state;
   }
