@@ -6,10 +6,14 @@ export default class NavigationBar extends Component {
     super(props);
 
     this.loginButtonForKakao = this.loginButtonForKakao.bind(this);
+    this.logoutButton = this.logoutButton.bind(this);
   }
   loginButtonForKakao() {
     window.location.href =
       "https://kauth.kakao.com/oauth/authorize?client_id=dab58a800514cc429576cf0f84c83ab0&redirect_uri=http://harmony.seongrok.net/kakao/auth&response_type=code";
+  }
+  logoutButton(){
+    this.props.logout()
   }
 
   render() {
@@ -80,7 +84,8 @@ export default class NavigationBar extends Component {
                 </p>
                 <button
                   type="button"
-                  class="border border-green-300 text-green-300 rounded-md px-4 py-2 mr-3 transition duration-500 ease select-none hover:text-white hover:bg-green-300 hover:border-green-300 focus:outline-none focus:shadow-outline"
+                  className="border border-green-300 text-green-300 rounded-md px-4 py-2 ml-3 transition duration-500 ease select-none hover:text-white hover:bg-green-300 hover:border-green-300 focus:outline-none focus:shadow-outline"
+                  onClick={this.logoutButton}
                 >
                   <div className="flex flex-row flex-nowrap align-middle justify-center">
                     로그아웃
@@ -104,7 +109,7 @@ export default class NavigationBar extends Component {
               <div>
                 <button
                   type="button"
-                  class="border border-yellow-400 text-yellow-400 rounded-md px-4 py-2 mr-3 mt-2 lg:mt-0 transition duration-500 ease select-none hover:text-white hover:bg-yellow-400 focus:outline-none focus:shadow-outline"
+                  className="border border-yellow-400 text-yellow-400 rounded-md px-4 py-2 mr-3 mt-2 lg:mt-0 transition duration-500 ease select-none hover:text-white hover:bg-yellow-400 focus:outline-none focus:shadow-outline"
                   onClick={this.loginButtonForKakao}
                 >
                   <div className="flex flex-row flex-nowrap align-middle justify-center">
