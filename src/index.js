@@ -31,6 +31,7 @@ ReactDOM.render(
         <Route exact path="/service/info"><Containers.ServiceInformaion /></Route>
         <Route exact path="/kakao/auth"><Containers.KakaoLogin /></Route>
         <Route exact path="/signup"><Containers.NavigationBar /><Containers.SignUp /><Containers.FooterBar /></Route>
+        <Route exact path="/userlist"><Containers.NavigationBar /><Containers.UserList /><Containers.FooterBar /></Route>
       </React.StrictMode>
       </PersistGate>
     </Provider>
