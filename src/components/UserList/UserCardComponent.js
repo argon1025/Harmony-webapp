@@ -4,7 +4,8 @@ export default class UserCard extends Component {
   state = {
     name:"",
     blogLink:"",
-    jobTag:""
+    jobTag:"",
+    profileImage:""
   }
   constructor(props) {
     super(props);
@@ -13,6 +14,7 @@ export default class UserCard extends Component {
     this.state.name = this.props.name || "User";
     this.state.blogLink = this.props.blogLink || "http://harmony.seongrok.net";
     this.state.jobTag = this.props.jobTag || "1";
+    this.state.profileImage = this.props.profileImage || "http://k.kakaocdn.net/dn/5b4p3/btqXfJNCwln/xkWdK3xaopQHiqj3kG3DZ0/img_640x640.jpg";
 
   }
 
@@ -22,7 +24,7 @@ export default class UserCard extends Component {
         <div class="relative bg-white rounded-3xl py-6 px-6 my-4 shadow-xl">
           <div class=" text-white flex items-center absolute rounded-full shadow-xl bg-pink-500 left-4 -top-6 overflow-hidden">
             <img
-              src="http://k.kakaocdn.net/dn/5b4p3/btqXfJNCwln/xkWdK3xaopQHiqj3kG3DZ0/img_640x640.jpg"
+              src={this.state.profileImage}
               alt="UserImage"
               className="h-16 w-16"
             ></img>
