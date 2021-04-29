@@ -62,13 +62,13 @@ export default class NavigationBar extends Component {
                 />
               </g>
             </svg>
-            <p className="text-2xl font-semibold text-gray-700"> Harmony</p>
+            <a href="/"><p className="text-2xl font-semibold text-gray-700" > Harmony</p></a>
           </div>
           <div className="flex-auto flex justify-center pt-3">
-            <a className="text-base text-gray-700 pr-4" href="/">
+            <a className="text-base text-gray-700 pr-4" href="/userlist">
               파트너 찾기
             </a>
-            <a className="text-base text-gray-700 pr-4" href="/">
+            <a className="text-base text-gray-700 pr-4" href="/projectlist">
               프로젝트 찾기
             </a>
             <a className="text-base text-gray-700" href="/">
