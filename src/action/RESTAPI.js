@@ -94,3 +94,28 @@ export const getKakaoToken = (kakaoCode) => async (dispatch, getState) => {
     }
   }
 };
+
+// 카카오 토큰 정보를 이용한 회원가입 요청
+export const signUpUser = (blogLink,jobTag) => async (dispatch, getState) => {
+  const HARMONY_URL_HOST =
+  "https://r5fg3qi652.execute-api.ap-northeast-2.amazonaws.com/dev1/api/v1/kakao/account";
+
+  try {
+    const result = await Axios.post(`${HARMONY_URL_HOST}`, {
+      "blogLink": `${blogLink}`,
+      "jobTag": `${jobTag}`,
+    },{
+      headers: {
+        userToken: getState().ACCESS_TOKEN,
+        userTokenType: "kakao",
+      },
+    });
+    console.log(result);
+    dispatch(modal.openErrorMessage("회원가입에 성공했습니다!", "/"));
+  } catch (error) {
+    console.log(error.response.data); // 서버응답
+    console.log(error.response.status); //400
+    console.log(error.response.headers);
+    dispatch(modal.openErrorMessage("회원가입에 실패했습니다, 허용된 문자만 입력해 주세요."));
+  }
+}
