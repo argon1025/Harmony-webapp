@@ -1,8 +1,31 @@
 import React, { Component } from "react";
 
 export default class SignUp extends Component {
+  state = {
+    blogUrl:"",
+    jobTag:""
+  }
   constructor(props) {
     super(props);
+
+    this.inputIsChange = this.inputIsChange.bind(this);
+    this.jobTagIsChange = this.jobTagIsChange.bind(this);
+    this.pressSingUpButton = this.pressSingUpButton.bind(this);
+  }
+  inputIsChange(event){
+    // console.log(event.target.name);
+    // console.log(event.target.value);
+    this.setState({...this.state,[event.target.name]:event.target.value});
+    console.log(this.state)
+  }
+  jobTagIsChange(event){
+    // console.log(event);
+    // console.log(event.target.id);
+    this.setState({...this.state,jobTag:event.target.id});
+  }
+  pressSingUpButton(){
+    console.log("click")
+    this.props.signUpUser(this.state.blogUrl,this.state.jobTag);
   }
 
   render() {
@@ -37,6 +60,7 @@ export default class SignUp extends Component {
               type="text"
               placeholder="http://harmony.github.io"
               className="text-sm sm:text-base relative w-full border rounded placeholder-gray-400 focus:border-indigo-400 focus:outline-none py-2 pr-2 pl-12"
+              onChange={this.inputIsChange}
             />
           </div>
 
@@ -50,6 +74,8 @@ export default class SignUp extends Component {
                 type="radio"
                 name="jobs"
                 class="form-checkbox text-green-500"
+                onClick={this.jobTagIsChange}
+                id="1"
               />
               <td class="px-2 text-center">
                 <span class="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">
@@ -62,6 +88,8 @@ export default class SignUp extends Component {
                 type="radio"
                 name="jobs"
                 class="form-checkbox text-green-500"
+                onClick={this.jobTagIsChange}
+                id="2"
               />
               <td class="px-2 text-center">
                 <span class="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs">
@@ -74,6 +102,8 @@ export default class SignUp extends Component {
                 type="radio"
                 name="jobs"
                 class="form-checkbox text-green-500"
+                onClick={this.jobTagIsChange}
+                id="3"
               />
               <td class="px-2 text-center">
                 <span class="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">
@@ -84,7 +114,7 @@ export default class SignUp extends Component {
           </div>
           {/* SignUp Button */}
           <div class="mt-6">
-            <button type="button" class="w-full focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-green-500 hover:bg-green-600 hover:shadow-lg">
+            <button type="button" onClick={this.pressSingUpButton} class="w-full focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-green-500 hover:bg-green-600 hover:shadow-lg">
               SignUp
             </button>
           </div>
