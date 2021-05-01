@@ -7,6 +7,7 @@ import SignUp from "./signUp";
 import CautionModal from "./CautionModal";
 import UserList from "./UserList";
 import ProjectList from "./ProjectList";
+import ProjectCreate from "./ProjectCreate";
 
 export {
   ServiceInformaion,
@@ -17,5 +18,6 @@ export {
   SignUp,
   CautionModal,
   UserList,
-  ProjectList
+  ProjectList,
+  ProjectCreate
 };

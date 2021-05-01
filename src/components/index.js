@@ -7,6 +7,7 @@ import SignUpComponent from "./SignUp/signUpComponent";
 import CautionModalComponent from "./Modal/CautionModalComponent";
 import UserListComponent from "./UserList/UserListComponent";
 import projectListComponent from "./ProjectList/ProjecListComponent";
+import projectCreateComponent from "./ProjectCreate/ProjectCreateComponent";
 
 export {
   ServiceInformaionComponent,
@@ -17,5 +18,6 @@ export {
   SignUpComponent,
   CautionModalComponent,
   UserListComponent,
-  projectListComponent
+  projectListComponent,
+  projectCreateComponent
 };

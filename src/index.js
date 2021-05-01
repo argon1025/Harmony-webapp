@@ -33,6 +33,7 @@ ReactDOM.render(
         <Route exact path="/signup"><Containers.NavigationBar /><Containers.SignUp /><Containers.FooterBar /></Route>
         <Route exact path="/userlist"><Containers.NavigationBar /><Containers.UserList /><Containers.FooterBar /></Route>
         <Route exact path="/projectlist"><Containers.NavigationBar /><Containers.ProjectList /><Containers.FooterBar /></Route>
+        <Route exact path="/projectcreate"><Containers.NavigationBar /><Containers.ProjectCreate /><Containers.FooterBar /></Route>
       </React.StrictMode>
       </PersistGate>
     </Provider>
