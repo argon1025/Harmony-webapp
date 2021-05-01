@@ -1,10 +1,4 @@
-/**
- * Action
- *
- * Redux 에서 상태에 변화가 필요할때 발생되는 액션
- */
 import Axios from "axios";
-import * as modal from "../action/modal";
 
 export const getUserList = async() => {
     const HARMONY_URL_HOST = "https://r5fg3qi652.execute-api.ap-northeast-2.amazonaws.com/dev1/api/v1/accounts";

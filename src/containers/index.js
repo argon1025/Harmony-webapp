@@ -6,6 +6,7 @@ import KakaoLogin from "./KakaoLogin";
 import SignUp from "./signUp";
 import CautionModal from "./CautionModal";
 import UserList from "./UserList";
+import ProjectList from "./ProjectList";
 
 export {
   ServiceInformaion,
@@ -15,5 +16,6 @@ export {
   KakaoLogin,
   SignUp,
   CautionModal,
-  UserList
+  UserList,
+  ProjectList
 };

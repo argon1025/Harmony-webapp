@@ -57,7 +57,7 @@ export default class UserList extends Component {
     return (
       <div className="min-h-screen bg-gray-50 justify-center">
         <div className="flex flex-row justify-center lg:py-28">
-          <p className="text-xl text-gray-700 lg:text-4xl pt-5">
+          <p className="text-sm text-gray-700 lg:text-4xl pt-5">
             프로젝트를 시작하기전 어떤 사람들이 있는지 확인하세요!
           </p>
         </div>

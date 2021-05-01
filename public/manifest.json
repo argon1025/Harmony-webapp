@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Harmony",
+  "name": "Harmony 프로젝트 팀 구성 플랫폼",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +18,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
+  "start_url": "/",
+  "display": "fullscreen",
+  "theme_color": "#72d499",
   "background_color": "#ffffff"
 }
