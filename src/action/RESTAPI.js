@@ -119,3 +119,29 @@ export const signUpUser = (blogLink,jobTag) => async (dispatch, getState) => {
     dispatch(modal.openErrorMessage("회원가입에 실패했습니다, 허용된 문자만 입력해 주세요."));
   }
 }
+
+// 프로젝트 생성 요청
+export const createProject = (title,content) => async (dispatch,getState) => {
+  const HARMONY_URL_HOST =
+  "https://r5fg3qi652.execute-api.ap-northeast-2.amazonaws.com/dev1/api/v1/projects";
+
+  try {
+    const result = await Axios.post(`${HARMONY_URL_HOST}`, {
+      "title": `${title}`,
+      "content": `${content}`,
+    },{
+      headers: {
+        userToken: getState().ACCESS_TOKEN,
+        userTokenType: "kakao",
+        userid: getState().USER_ID,
+      },
+    });
+    console.log(result);
+    dispatch(modal.openErrorMessage("프로젝트를 생성하는데 성공했습니다", "/projectlist"));
+  } catch (error) {
+    console.log(error.response.data); // 서버응답
+    console.log(error.response.status); //400
+    console.log(error.response.headers);
+    dispatch(modal.openErrorMessage("유저정보가 올바르지 않거나 금지된 문자열이 포함되어 있습니다."));
+  }
+}
