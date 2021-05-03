@@ -32,7 +32,7 @@ export default class NavigationBar extends Component {
             <a className="text-base text-gray-700 pr-4" href="/projectlist">
               프로젝트 찾기
             </a>
-            <a className="text-base text-gray-700" href="/">
+            <a className="text-base text-gray-700" href="/projectcreate">
               프로젝트 등록
             </a>
           </div>
