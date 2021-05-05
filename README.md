@@ -5,7 +5,7 @@
 
 Team recruitment platform for junior developers
 
-Backend-server repositories is [HERE](https://github.com/argon1025/Harmony-serverless-backend/edit/main/README.md)
+Backend-server repositories is [HERE](https://github.com/argon1025/Harmony-serverless-backend)
 
 Service pages is [HERE](http://harmony.seongrok.net)
 
