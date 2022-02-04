@@ -1,5 +1,5 @@
 # Harmony-webApp
-> 🔧 project is beta release
+> 🔧 This project won't be maintained
 
 주니어 개발자를 위한 팀 구인 플랫폼
 
